@@ -1,0 +1,33 @@
+h1 {
+    color: rgb(0, 112, 210);
+}
+p {
+    font-family: 'Salesforce Sans', Arial, sans-serif;
+    color: rgb(62, 62, 60);
+}
+.app {
+    background-color: #fafaf9;
+    height: 100vh;
+    overflow: scroll;
+}
+/*my custom css */
+lightning-tab{
+    padding: 0;
+}
+.tab-content{
+    padding: 0 1rem;
+}
+.action_list .slds-item{
+    margin: 0.75rem 0;
+}
+.slds-item .slds-button_stretch{
+    color: initial;
+    justify-content: flex-start;
+    min-height: 3rem;
+}
+.slds-item span.active-action-name{
+    font-weight: bolder;
+}
+.slds-item span.active-action-text{
+    margin-left: 1rem;
+}

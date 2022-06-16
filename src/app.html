@@ -1,0 +1,91 @@
+<template>
+	<lightning-card variant="Narrow" title="Order Actions" icon-name="standard:action_list_component">
+		<lightning-tabset>
+
+			<lightning-tab label="Actions">
+				<div class="tab-content">
+
+					<ul class="action_list">
+						<li class="slds-item">
+							<button class="slds-button slds-button_neutral slds-button_stretch">Refund Order</button>
+						</li>
+						<li class="slds-item">
+							<button class="slds-button slds-button_neutral slds-button_stretch">
+							<lightning-icon icon-name="utility:stage" size="xx-small" style="margin-right:0.5rem;"></lightning-icon>
+							<span class="active-action-name">Replace Order</span><span class="active-action-text">(In progress)</span></button>
+						</li>
+						<li class="slds-item">
+							<button class="slds-button slds-button_neutral slds-button_stretch">
+							<lightning-icon icon-name="utility:stage" size="xx-small" style="margin-right:0.5rem;"></lightning-icon>
+							<span class="active-action-name">Change Address</span><span class="active-action-text">(In progress)</span></button>
+						</li>
+					</ul>
+				</div>
+
+			</lightning-tab>
+			<lightning-tab label="History" title="Actions History">
+				<div class="tab-content">
+
+					<ul class="slds-scrollable_y slds-has-dividers_bottom-space slds-p-right_xx-small">
+
+						<li class="slds-border_bottom slds-var-p-vertical_small">
+							<span class="slds-text-color_weak slds-text-body_small">Started</span>
+							<span class="slds-text-color_weak slds-float_right slds-text-body_small">
+								<lightning-formatted-date-time value="1545254878000" year="numeric" month="numeric" day="numeric" hour="2-digit"
+                                        minute="2-digit" time-zone-name="short" hour12="false"></lightning-formatted-date-time></span>
+							<span class="slds-text-color_default slds-show slds-truncate">Replace Order</span>
+							<a href="#" target="_blank" class="slds-text-body_small">Andrey Voronov</a>
+						</li>
+
+						<li class="slds-border_bottom slds-var-p-vertical_small">
+							<span class="slds-text-color_weak slds-text-body_small">Started</span>
+							<span class="slds-text-color_weak slds-float_right slds-text-body_small">
+								<lightning-formatted-date-time value="1545252838000" year="numeric" month="numeric" day="numeric" hour="2-digit"
+                                        minute="2-digit" time-zone-name="short" hour12="false"></lightning-formatted-date-time></span>
+							<span class="slds-text-color_default slds-show slds-truncate">Change Address</span>
+							<a href="#" target="_blank" class="slds-text-body_small">Andrey Voronov</a>
+						</li>
+						<!-- slds-text-color_destructive for cancelled flows -->
+						<li class="slds-border_bottom slds-var-p-vertical_small">
+							<span class="slds-text-color_weak slds-text-body_small">Cancelled</span>
+							<span class="slds-text-color_weak slds-float_right slds-text-body_small">
+								<lightning-formatted-date-time value="1545250620000" year="numeric" month="numeric" day="numeric" hour="2-digit"
+                                        minute="2-digit" time-zone-name="short" hour12="false"></lightning-formatted-date-time></span>
+							<span class="slds-text-color_destructive slds-show slds-truncate">Refund Order</span>
+							<a href="#" target="_blank" class="slds-text-body_small">Boris Masloff</a>
+						</li>
+						<!-- slds-text-color_success for complete flows -->
+						<li class="slds-border_bottom slds-var-p-vertical_small">
+							<span class="slds-text-color_weak slds-text-body_small">Complete</span>
+							<span class="slds-text-color_weak slds-float_right slds-text-body_small">
+								<lightning-formatted-date-time value="1545250420000" year="numeric" month="numeric" day="numeric" hour="2-digit"
+                                        minute="2-digit" time-zone-name="short" hour12="false"></lightning-formatted-date-time></span>
+							<span class="slds-text-color_success slds-show slds-truncate">Refund Order</span>
+							<a href="#" target="_blank" class="slds-text-body_small">Aleksandra Bayeva</a>
+						</li>
+
+					</ul>
+				</div>
+			</lightning-tab>
+		</lightning-tabset>
+	</lightning-card>
+
+	<!-- progress-indicator -->
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+
+	<lightning-card variant="Narrow" title="Refund Order" icon-name="standard:partner_fund_allocation">
+		<div style="min-height: 20rem;">
+			<lightning-spinner alternative-text="Loading" size="medium"></lightning-spinner>
+		</div>
+		<lightning-progress-indicator current-step="2" type="base" variant="base">
+			<lightning-progress-step label="Step 1" value="1"></lightning-progress-step>
+			<lightning-progress-step label="Step 2" value="2"></lightning-progress-step>
+			<lightning-progress-step label="Step 3" value="3"></lightning-progress-step>
+			<lightning-progress-step label="Step 4" value="4"></lightning-progress-step>
+		</lightning-progress-indicator>
+	</lightning-card>
+</template>

@@ -1,0 +1,7 @@
+{
+  "name": "@wcd/avoronovsynebo.lwc-l476j8m2-fork-l476lx4q",
+  "version": "0.0.0",
+  "scripts": {
+    "serve": "npx wcd-cli@latest serve 7VEmfV9uie2DMJwHCrs8 --open"
+  }
+}
